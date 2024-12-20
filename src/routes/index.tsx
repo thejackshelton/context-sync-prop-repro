@@ -6,11 +6,7 @@ export default component$(() => {
 
   return (
     <Checkbox.Root>
-      <Checkbox.Trigger class="checkbox-trigger">
-        <Checkbox.Indicator class="checkbox-indicator">
-          Checked
-        </Checkbox.Indicator>
-      </Checkbox.Trigger>
+      <Checkbox.Trigger class="checkbox-trigger">Checked</Checkbox.Trigger>
     </Checkbox.Root>
   );
 });
