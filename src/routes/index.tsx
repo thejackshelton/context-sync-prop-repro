@@ -1,25 +1,19 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$, useStyles$ } from "@builder.io/qwik";
+import { Checkbox } from "~/components/checkbox";
 
 export default component$(() => {
+  useStyles$(styles);
+
   return (
-    <>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
-    </>
+    <Checkbox.Root>
+      <Checkbox.Trigger class="checkbox-trigger">
+        <Checkbox.Indicator class="checkbox-indicator">
+          Checked
+        </Checkbox.Indicator>
+      </Checkbox.Trigger>
+    </Checkbox.Root>
   );
 });
 
-export const head: DocumentHead = {
-  title: "Welcome to Qwik",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};
+// example styles
+import styles from "~/components/checkbox/checkbox.css?inline";
